@@ -60,6 +60,8 @@ class KeycloakService {
 
   Stream<KeycloakEvent> get keycloakEventsStream => _keycloakEvents.stream;
 
+  String get refreshToken => _keycloak.refreshToken;
+
   Future<void> login([KeycloakLoginOptions? options]) async {
     await this._keycloak.login(options);
 
